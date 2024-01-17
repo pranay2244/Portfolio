@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css"
+    />
+  </head>
+  <body
+    class="transition-colors duration-300 ease-in-out w-full overflow-x-hidden"
+  >
+    <nav class="bg-white w-full p-4 dark:bg-black">
+      <div class="container mx-auto flex justify-between items-center">
+        <div>
+          <a
+            href="#"
+            class="text-black font-bold text-lg no-underline dark:text-white"
+            >Pranay Kumar</a
+          >
+        </div>
+
+        <!-- Navbar links -->
+        <div class="hidden md:flex space-x-4">
+          <a
+            href="#"
+            class="text-black hover:text-gray-400 no-underline dark:text-white dark:hover:text-gray-500"
+            >Home</a
+          >
+          <a
+            href="#"
+            class="text-black hover:text-gray-400 no-underline dark:text-white dark:hover:text-gray-500"
+            >About</a
+          >
+          <a
+            href="#"
+            class="text-black hover:text-gray-400 no-underline dark:text-white dark:hover:text-gray-500"
+            >Projects</a
+          >
+          <a
+            href="#"
+            class="text-black hover:text-gray-400 no-underline dark:text-white dark:hover:text-gray-500"
+            >Contact</a
+          >
+        </div>
+
+        <!-- Dark mode and light mode switch -->
+        <div class="box-border">
+          <input
+            type="checkbox"
+            id="darkModeToggler"
+            class="opacity-0 absolute"
+          />
+          <label
+            for="darkModeToggler"
+            class="bg-gray-300 w-12 h-6 rounded-3xl relative p-1 cursor-pointer flex justify-between items-center"
+          >
+            <i class="fas fa-moon text-yellow-500"></i>
+            <i class="fas fa-sun text-orange-600"></i>
+            <i
+              id="modeToggleCircle"
+              class="fas fa-circle text-2xl absolute left-0 text-black dark:text-white dark:right-0 transition-all"
+            ></i>
+          </label>
+        </div>
+
+        <!-- Mobile menu button for smaller screens -->
+        <div class="md:hidden">
+          <button id="mobile-menu-btn" class="text-white focus:outline-none">
+            <svg
+              class="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16m-7 6h7"
+              ></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </nav>
+    <div
+      id="mobile-menu-overlay"
+      class="hidden md:hidden fixed inset-0 bg-gray-800 bg-opacity-75 z-50"
+    ></div>
+
+    <!-- Mobile menu content -->
+    <div
+      id="mobile-menu"
+      class="hidden md:hidden fixed inset-y-0 left-0 w-3/4 bg-gray-800 z-50"
+    >
+      <div class="p-4">
+        <a href="#" class="text-white block py-2">Home</a>
+        <a href="#" class="text-white block py-2">About</a>
+        <a href="#" class="text-white block py-2">Projects</a>
+        <a href="#" class="text-white block py-2">Contact</a>
+      </div>
+    </div>
+
+    <div class="h-96 w-full bg-green-200">abc</div>
+    <div class="h-96 bg-green-200">abc</div>
+    <div class="h-96 bg-green-200">abc</div>
+  </body>
+  <script>
+    document
+      .getElementById("mobile-menu-btn")
+      .addEventListener("click", function () {
+        document
+          .getElementById("mobile-menu-overlay")
+          .classList.toggle("hidden");
+        document.getElementById("mobile-menu").classList.toggle("hidden");
+      });
+
+    document
+      .getElementById("mobile-menu-overlay")
+      .addEventListener("click", function () {
+        document.getElementById("mobile-menu-overlay").classList.add("hidden");
+        document.getElementById("mobile-menu").classList.add("hidden");
+      });
+
+    // Toggle dark mode and light mode
+    const modeToggleCircle = document.getElementById("modeToggleCircle");
+    const darkModeToggler = document.getElementById("darkModeToggler");
+    const body = document.body;
+    darkModeToggler.addEventListener("change", () => {
+      body.classList.toggle("dark");
+      modeToggleCircle.classList.toggle("left-0");
+    });
+  </script>
+</html>

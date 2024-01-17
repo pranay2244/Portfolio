@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Poppins";
+  src: url("https://fonts.googleapis.com/css2?family=Heebo&family=Poppins&display=swap");
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+}
