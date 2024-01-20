@@ -23,7 +23,9 @@
     <nav
       class="flex justify-around items-center max-md:hidden h-[20vh] w-full fixed bg-white z-50 dark:bg-black"
     >
-      <div class="text-4xl hover:cursor-default text-black dark:text-white">
+      <div
+        class="text-4xl hover:cursor-default text-black dark:text-white md:text-3xl"
+      >
         Pranay
       </div>
       <!-- Dark mode and light mode switch -->
@@ -46,7 +48,9 @@
         </label>
       </div>
       <div>
-        <ul class="flex nav-links gap-8 list-none list-image-none text-2xl">
+        <ul
+          class="flex nav-links gap-8 list-none list-image-none text-2xl md:text-xl"
+        >
           <li>
             <a
               class="transition-all text-black dark:text-white no-underline hover:text-gray-500 hover:underline hover:underline-offset-8 decoration-gray-400"
@@ -149,10 +153,10 @@
     </nav>
 
     <!-- Profile Section -->
-    <div class="w-full bg-white dark:bg-black">
+    <div class="w-full bg-white dark:bg-black md:pt-52">
       <div
         id="profile"
-        class="flex justify-center gap-20 max-2xl:h-4/5 max-2xl:mb-24 max-xl:block max-sm:h-4/5 mb-0 pt-[5vh] h-[95vh] my-0 mx-40 box-border min-h-fit max-xl:h-fit max-xl:my-0 max-xl:mx-20"
+        class="flex justify-center gap-20 max-2xl:h-4/5 max-2xl:mb-24 max-xl:block max-sm:h-4/5 mb-0 pt-[5vh] h-[95vh] my-0 mx-40 box-border min-h-fit max-xl:h-fit max-xl:my-0 max-xl:mx-20 md:flex md:flex-col lg:flex-row max-lg:items-center max-lg:gap-0 max-md:pt-56"
       >
         <div
           class="flex h-96 w-96 my-auto mx-0 max-xl:w-72 max-xl:h-72 max-xl:mt-0 max-xl:mx-auto max-xl:mb-8 max-sm:w-auto max-sm:h-1/2 max-sm:justify-center"
@@ -160,7 +164,7 @@
           <img
             src="./images/pranay.jpg"
             alt="Pranay Kumar"
-            class="rounded-full"
+            class="rounded-full max-lg:w-3/4 max-lg:translate-x-[20%] max-md:w-1/2 max-md:translate-x-0"
           />
         </div>
         <div class="self-center text-center">
@@ -224,7 +228,7 @@
           Get To Know More
         </p>
         <h1
-          class="text-5xl text-center max-sm:text-3xl m-0 text-black dark:text-white"
+          class="text-5xl text-center max-sm:text-3xl m-0 max-lg:mb-10 text-black dark:text-white"
         >
           About Me
         </h1>
@@ -233,9 +237,9 @@
             class="flex h-96 w-96 my-auto mx-0 max-xl:w-72 max-xl:h-72 max-xl:mt-0 max-xl:mx-auto max-xl:mb-8 max-sm:w-auto max-sm:h-1/2 max-sm:justify-center"
           >
             <img
-              src="./images/pranay.jpg"
+              src="./images/test.jpg"
               alt="Profile picture"
-              class="rounded-3xl"
+              class="rounded-3xl translate-x-5 max-md:w-4/5"
             />
           </div>
           <div class="flex flex-col justify-center">
@@ -278,9 +282,11 @@
             </div>
           </div>
         </div>
-        <a href="#skills" class="text-black no-underline dark:text-white"
+        <a
+          href="#skills"
+          class="text-black no-underline dark:text-white max-lg:hidden"
           ><i
-            class="fa-solid fa-angles-down text-2xl absolute -right-20 bottom-10 max-xl:hidden"
+            class="fa-solid fa-angles-down text-2xl absolute -right-20 bottom-10"
           ></i>
         </a>
       </div>
@@ -290,7 +296,7 @@
     <div class="bg-white dark:bg-black">
       <div
         id="skills"
-        class="pt-[5vh] h-[95vh] my-0 mx-40 box-border min-h-fit max-xl:h-fit max-xl:my-0 max-xl:mx-20 relative max-xl:mt-8"
+        class="pt-[5vh] h-[95vh] my-0 mx-40 box-border min-h-fit max-xl:h-fit max-xl:my-0 max-xl:mx-20 relative max-xl:pt-8"
       >
         <p class="text-center text-gray-600 dark:text-gray-300">Explore My</p>
         <h1
@@ -311,13 +317,13 @@
                 Frontend Development
               </h2>
               <div
-                class="flex text-left flex-wrap flex-row gap-10 justify-around"
+                class="flex text-left flex-wrap flex-row gap-10 justify-around max-lg:justify-start"
               >
                 <div
-                  class="flex w-40 justify-around gap-2 max-sm:text-base items-center"
+                  class="flex w-40 justify-around gap-2 max-sm:text-base items-center max-lg:justify-start"
                 >
                   <i
-                    class="fa-solid fa-circle-check text-xl text-black dark:text-white"
+                    class="fa-solid fa-circle-check text-xl text-black dark:text-white pr-8"
                   ></i>
                   <div>
                     <h3 class="m-0 text-black dark:text-white">HTML</h3>
@@ -327,10 +333,10 @@
                   </div>
                 </div>
                 <div
-                  class="flex w-40 justify-around gap-2 max-sm:text-base items-center"
+                  class="flex w-40 justify-around gap-2 max-sm:text-base items-center max-lg:justify-start"
                 >
                   <i
-                    class="fa-solid fa-circle-check text-xl text-black dark:text-white"
+                    class="fa-solid fa-circle-check text-xl text-black dark:text-white pr-8"
                   ></i>
                   <div>
                     <h3 class="m-0 text-black dark:text-white">CSS</h3>
@@ -340,10 +346,10 @@
                   </div>
                 </div>
                 <div
-                  class="flex w-40 justify-around gap-2 max-sm:text-base items-center"
+                  class="flex w-40 justify-around gap-2 max-sm:text-base items-center max-lg:justify-start"
                 >
                   <i
-                    class="fa-solid fa-circle-check text-xl text-black dark:text-white"
+                    class="fa-solid fa-circle-check text-xl text-black dark:text-white pr-8"
                   ></i>
                   <div>
                     <h3 class="m-0 text-black dark:text-white">Tailwind</h3>
@@ -353,10 +359,10 @@
                   </div>
                 </div>
                 <div
-                  class="flex w-40 justify-around gap-2 max-sm:text-base items-center"
+                  class="flex w-40 justify-around gap-2 max-sm:text-base items-center max-lg:justify-start"
                 >
                   <i
-                    class="fa-solid fa-circle-check text-xl text-black dark:text-white"
+                    class="fa-solid fa-circle-check text-xl text-black dark:text-white pr-8"
                   ></i>
                   <div>
                     <h3 class="m-0 text-black dark:text-white">JavaScript</h3>
@@ -366,10 +372,10 @@
                   </div>
                 </div>
                 <div
-                  class="flex w-40 justify-around gap-2 max-sm:text-base items-center"
+                  class="flex w-40 justify-around gap-2 max-sm:text-base items-center max-lg:justify-start"
                 >
                   <i
-                    class="fa-solid fa-circle-check text-xl text-black dark:text-white"
+                    class="fa-solid fa-circle-check text-xl text-black dark:text-white pr-8"
                   ></i>
                   <div>
                     <h3 class="m-0 text-black dark:text-white">TypeScript</h3>
@@ -379,10 +385,10 @@
                   </div>
                 </div>
                 <div
-                  class="flex w-40 justify-around gap-2 max-sm:text-base items-center"
+                  class="flex w-40 justify-around gap-2 max-sm:text-base items-center max-lg:justify-start"
                 >
                   <i
-                    class="fa-solid fa-circle-check text-xl text-black dark:text-white"
+                    class="fa-solid fa-circle-check text-xl text-black dark:text-white pr-8"
                   ></i>
                   <div>
                     <h3 class="m-0 text-black dark:text-white">Angular</h3>
@@ -402,13 +408,13 @@
                 Backend Development
               </h2>
               <div
-                class="flex text-left flex-wrap flex-row gap-10 justify-around"
+                class="flex text-left flex-wrap flex-row gap-10 justify-around max-lg:justify-start"
               >
                 <div
-                  class="flex w-40 justify-around gap-2 max-sm:text-base items-center"
+                  class="flex w-40 justify-around gap-2 max-sm:text-base items-center max-lg:justify-start"
                 >
                   <i
-                    class="fa-solid fa-circle-check text-xl text-black dark:text-white"
+                    class="fa-solid fa-circle-check text-xl text-black dark:text-white pr-8"
                   ></i>
                   <div>
                     <h3 class="m-0 text-black dark:text-white">Spring</h3>
@@ -418,10 +424,10 @@
                   </div>
                 </div>
                 <div
-                  class="flex w-40 justify-around gap-2 max-sm:text-base items-center"
+                  class="flex w-40 justify-around gap-2 max-sm:text-base items-center max-lg:justify-start"
                 >
                   <i
-                    class="fa-solid fa-circle-check text-xl text-black dark:text-white"
+                    class="fa-solid fa-circle-check text-xl text-black dark:text-white pr-8"
                   ></i>
                   <div>
                     <h3 class="m-0 text-black dark:text-white">Node JS</h3>
@@ -431,10 +437,10 @@
                   </div>
                 </div>
                 <div
-                  class="flex w-40 justify-around gap-2 max-sm:text-base items-center"
+                  class="flex w-40 justify-around gap-2 max-sm:text-base items-center max-lg:justify-start"
                 >
                   <i
-                    class="fa-solid fa-circle-check text-xl text-black dark:text-white"
+                    class="fa-solid fa-circle-check text-xl text-black dark:text-white pr-8"
                   ></i>
                   <div>
                     <h3 class="m-0 text-black dark:text-white">Go (Echo)</h3>
@@ -444,10 +450,10 @@
                   </div>
                 </div>
                 <div
-                  class="flex w-40 justify-around gap-2 max-sm:text-base items-center"
+                  class="flex w-40 justify-around gap-2 max-sm:text-base items-center max-lg:justify-start"
                 >
                   <i
-                    class="fa-solid fa-circle-check text-xl text-black dark:text-white"
+                    class="fa-solid fa-circle-check text-xl text-black dark:text-white pr-8"
                   ></i>
                   <div>
                     <h3 class="m-0 text-black dark:text-white">ExpressJS</h3>
@@ -457,25 +463,23 @@
                   </div>
                 </div>
                 <div
-                  class="flex w-40 justify-around gap-2 max-sm:text-base items-center"
+                  class="flex w-40 justify-around gap-2 max-sm:text-base items-center max-lg:justify-start"
                 >
                   <i
-                    class="fa-solid fa-circle-check text-xl text-black dark:text-white"
+                    class="fa-solid fa-circle-check text-xl text-black dark:text-white pr-8"
                   ></i>
                   <div>
-                    <h3 class="m-0 text-black dark:text-white">
-                      MicroServices
-                    </h3>
+                    <h3 class="m-0 text-black dark:text-white">API Build</h3>
                     <p class="text-gray-600 dark:text-gray-300 m-0 mt-1">
                       Intermediate
                     </p>
                   </div>
                 </div>
                 <div
-                  class="flex w-40 justify-around gap-2 max-sm:text-base items-center"
+                  class="flex w-40 justify-around gap-2 max-sm:text-base items-center max-lg:justify-start"
                 >
                   <i
-                    class="fa-solid fa-circle-check text-xl text-black dark:text-white"
+                    class="fa-solid fa-circle-check text-xl text-black dark:text-white pr-8"
                   ></i>
                   <div>
                     <h3 class="m-0 text-black dark:text-white">Docker</h3>
@@ -499,13 +503,13 @@
                 Databases
               </h2>
               <div
-                class="flex text-left flex-wrap flex-row gap-10 justify-around"
+                class="flex text-left flex-wrap flex-row gap-10 justify-around max-lg:justify-start"
               >
                 <div
-                  class="flex w-40 justify-around gap-2 max-sm:text-base items-center"
+                  class="flex w-40 justify-around gap-2 max-sm:text-base items-center max-lg:justify-start"
                 >
                   <i
-                    class="fa-solid fa-circle-check text-xl text-black dark:text-white"
+                    class="fa-solid fa-circle-check text-xl text-black dark:text-white pr-8"
                   ></i>
                   <div>
                     <h3 class="m-0 text-black dark:text-white">Oracle</h3>
@@ -515,10 +519,10 @@
                   </div>
                 </div>
                 <div
-                  class="flex w-40 justify-around gap-2 max-sm:text-base items-center"
+                  class="flex w-40 justify-around gap-2 max-sm:text-base items-center max-lg:justify-start"
                 >
                   <i
-                    class="fa-solid fa-circle-check text-xl text-black dark:text-white"
+                    class="fa-solid fa-circle-check text-xl text-black dark:text-white pr-8"
                   ></i>
                   <div>
                     <h3 class="m-0 text-black dark:text-white">MySQL</h3>
@@ -528,10 +532,10 @@
                   </div>
                 </div>
                 <div
-                  class="flex w-40 justify-around gap-2 max-sm:text-base items-center"
+                  class="flex w-40 justify-around gap-2 max-sm:text-base items-center max-lg:justify-start"
                 >
                   <i
-                    class="fa-solid fa-circle-check text-xl text-black dark:text-white"
+                    class="fa-solid fa-circle-check text-xl text-black dark:text-white pr-8"
                   ></i>
                   <div>
                     <h3 class="m-0 text-black dark:text-white">MongoDB</h3>
@@ -541,10 +545,10 @@
                   </div>
                 </div>
                 <div
-                  class="flex w-40 justify-around gap-2 max-sm:text-base items-center"
+                  class="flex w-40 justify-around gap-2 max-sm:text-base items-center max-lg:justify-start"
                 >
                   <i
-                    class="fa-solid fa-circle-check text-xl text-black dark:text-white"
+                    class="fa-solid fa-circle-check text-xl text-black dark:text-white pr-8"
                   ></i>
                   <div>
                     <h3 class="m-0 text-black dark:text-white">Firebase RT</h3>
@@ -554,10 +558,10 @@
                   </div>
                 </div>
                 <div
-                  class="flex w-40 justify-around gap-2 max-sm:text-base items-center"
+                  class="flex w-40 justify-around gap-2 max-sm:text-base items-center max-lg:justify-start"
                 >
                   <i
-                    class="fa-solid fa-circle-check text-xl text-black dark:text-white"
+                    class="fa-solid fa-circle-check text-xl text-black dark:text-white pr-8"
                   ></i>
                   <div>
                     <h3 class="m-0 text-black dark:text-white">Firestore</h3>
@@ -567,10 +571,10 @@
                   </div>
                 </div>
                 <div
-                  class="flex w-40 justify-around gap-2 max-sm:text-base items-center"
+                  class="flex w-40 justify-around gap-2 max-sm:text-base items-center max-lg:justify-start"
                 >
                   <i
-                    class="fa-solid fa-circle-check text-xl text-black dark:text-white"
+                    class="fa-solid fa-circle-check text-xl text-black dark:text-white pr-8"
                   ></i>
                   <div>
                     <h3 class="m-0 text-black dark:text-white">Influx DB</h3>
@@ -590,13 +594,13 @@
                 Other
               </h2>
               <div
-                class="flex text-left flex-wrap flex-row gap-10 justify-around"
+                class="flex text-left flex-wrap flex-row gap-10 justify-around max-lg:justify-start"
               >
                 <div
-                  class="flex w-40 justify-around gap-2 max-sm:text-base items-center"
+                  class="flex w-40 justify-around gap-2 max-sm:text-base items-center max-lg:justify-start"
                 >
                   <i
-                    class="fa-solid fa-circle-check text-xl text-black dark:text-white"
+                    class="fa-solid fa-circle-check text-xl text-black dark:text-white pr-8"
                   ></i>
                   <div>
                     <h3 class="m-0 text-black dark:text-white">Git</h3>
@@ -606,10 +610,10 @@
                   </div>
                 </div>
                 <div
-                  class="flex w-40 justify-around gap-2 max-sm:text-base items-center"
+                  class="flex w-40 justify-around gap-2 max-sm:text-base items-center max-lg:justify-start"
                 >
                   <i
-                    class="fa-solid fa-circle-check text-xl text-black dark:text-white"
+                    class="fa-solid fa-circle-check text-xl text-black dark:text-white pr-8"
                   ></i>
                   <div>
                     <h3 class="m-0 text-black dark:text-white">OCI</h3>
@@ -619,10 +623,10 @@
                   </div>
                 </div>
                 <div
-                  class="flex w-40 justify-around gap-2 max-sm:text-base items-center"
+                  class="flex w-40 justify-around gap-2 max-sm:text-base items-center max-lg:justify-start"
                 >
                   <i
-                    class="fa-solid fa-circle-check text-xl text-black dark:text-white"
+                    class="fa-solid fa-circle-check text-xl text-black dark:text-white pr-8"
                   ></i>
                   <div>
                     <h3 class="m-0 text-black dark:text-white">Jira</h3>
@@ -632,10 +636,10 @@
                   </div>
                 </div>
                 <div
-                  class="flex w-40 justify-around gap-2 max-sm:text-base items-center"
+                  class="flex w-40 justify-around gap-2 max-sm:text-base items-center max-lg:justify-start"
                 >
                   <i
-                    class="fa-solid fa-circle-check text-xl text-black dark:text-white"
+                    class="fa-solid fa-circle-check text-xl text-black dark:text-white pr-8"
                   ></i>
                   <div>
                     <h3 class="m-0 text-black dark:text-white">DSA</h3>
@@ -645,10 +649,10 @@
                   </div>
                 </div>
                 <div
-                  class="flex w-40 justify-around gap-2 max-sm:text-base items-center"
+                  class="flex w-40 justify-around gap-2 max-sm:text-base items-center max-lg:justify-start"
                 >
                   <i
-                    class="fa-solid fa-circle-check text-xl text-black dark:text-white"
+                    class="fa-solid fa-circle-check text-xl text-black dark:text-white pr-8"
                   ></i>
                   <div>
                     <h3 class="m-0 text-black dark:text-white">Android</h3>
@@ -658,10 +662,10 @@
                   </div>
                 </div>
                 <div
-                  class="flex w-40 justify-around gap-2 max-sm:text-base items-center"
+                  class="flex w-40 justify-around gap-2 max-sm:text-base items-center max-lg:justify-start"
                 >
                   <i
-                    class="fa-solid fa-circle-check text-xl text-black dark:text-white"
+                    class="fa-solid fa-circle-check text-xl text-black dark:text-white pr-8"
                   ></i>
                   <div>
                     <h3 class="m-0 text-black dark:text-white">AWS Cloud</h3>
@@ -674,9 +678,11 @@
             </div>
           </div>
         </div>
-        <a href="#projects" class="text-black no-underline dark:text-white"
+        <a
+          href="#projects"
+          class="text-black no-underline dark:text-white max-lg:hidden"
           ><i
-            class="fa-solid fa-angles-down text-2xl absolute -right-20 bottom-10 max-xl:hidden"
+            class="fa-solid fa-angles-down text-2xl absolute -right-20 bottom-10"
           ></i>
         </a>
       </div>
@@ -707,7 +713,7 @@
                 <img
                   src="https://images.pexels.com/photos/1275929/pexels-photo-1275929.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
                   alt="Bike App"
-                  class="rounded-3xl w-[90%] h-[90%]"
+                  class="rounded-3xl w-[90%] h-[90%] max-lg:w-[30vh]"
                 />
               </div>
               <h2
@@ -739,7 +745,7 @@
                 <img
                   src="https://images.pexels.com/photos/1275929/pexels-photo-1275929.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
                   alt="AI Congress App"
-                  class="rounded-3xl w-[90%] h-[90%]"
+                  class="rounded-3xl w-[90%] h-[90%] max-lg:w-[30vh]"
                 />
               </div>
               <h2
@@ -778,7 +784,7 @@
                 <img
                   src="https://images.pexels.com/photos/1275929/pexels-photo-1275929.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
                   alt="Train QR"
-                  class="rounded-3xl w-[90%] h-[90%]"
+                  class="rounded-3xl w-[90%] h-[90%] max-[900px]:w-[30vh]"
                 />
               </div>
               <h2
@@ -803,9 +809,11 @@
             </div>
           </div>
         </div>
-        <a href="#contact" class="text-black no-underline dark:text-white"
+        <a
+          href="#contact"
+          class="text-black no-underline dark:text-white max-lg:hidden"
           ><i
-            class="fa-solid fa-angles-down text-2xl absolute -right-20 bottom-10 max-xl:hidden"
+            class="fa-solid fa-angles-down text-2xl absolute -right-20 bottom-10"
           ></i>
         </a>
       </div>
@@ -824,10 +832,10 @@
           Contact Me
         </h1>
         <div
-          class="flex justify-center rounded-3xl border-gray-400 border my-8 mx-auto p-2 max-sm:flex-wrap border-solid"
+          class="flex justify-center rounded-3xl border-gray-400 border my-8 mx-auto p-2 max-sm:flex-wrap border-solid max-lg:flex-col"
         >
           <div
-            class="flex items-center justify-center gap-2 m-4 text-xl max-sm:m-0"
+            class="flex items-center justify-center gap-2 m-4 text-xl max-sm:m-0 max-lg:text-base max-lg:m-0"
           >
             <i class="fa-regular fa-envelope text-black dark:text-white"></i>
             <p class="max-sm:text-base text-gray-600">
@@ -839,7 +847,7 @@
             </p>
           </div>
           <div
-            class="flex items-center justify-center gap-2 m-4 text-xl max-sm:m-0"
+            class="flex items-center justify-center gap-2 m-4 text-xl max-sm:m-0 max-lg:text-base max-lg:m-0"
           >
             <i class="fa-brands fa-linkedin-in text-black dark:text-white"></i>
             <p class="max-sm:text-base text-gray-600">
@@ -851,9 +859,11 @@
             </p>
           </div>
           <div
-            class="flex items-center justify-center gap-2 m-4 text-xl max-sm:m-0"
+            class="flex items-center justify-center gap-2 m-4 text-xl max-sm:m-0 max-lg:text-base max-lg:m-0 max-lg:gap-0"
           >
-            <i class="fa-brands fa-linkedin-in text-black dark:text-white"></i>
+            <i
+              class="fa-solid fa-mobile-screen-button text-black dark:text-white pr-2"
+            ></i>
             <p class="max-sm:text-base text-gray-600">
               <a
                 class="transition-all text-black dark:text-white no-underline hover:text-gray-500 hover:underline hover:underline-offset-8 decoration-gray-400"
