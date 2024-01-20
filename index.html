@@ -18,36 +18,59 @@
       crossorigin="anonymous"
     ></script>
   </head>
-  <body class="m-0 p-0">
+  <body class="m-0 p-0 transition-all">
     <!-- Navbar for Big Screens, Laptops and Tablets -->
-    <nav class="flex justify-around items-center max-md:hidden h-[20vh]">
-      <div class="text-4xl hover:cursor-default">Pranay</div>
+    <nav
+      class="flex justify-around items-center max-md:hidden h-[20vh] w-full fixed bg-white z-50 dark:bg-black"
+    >
+      <div class="text-4xl hover:cursor-default text-black dark:text-white">
+        Pranay
+      </div>
+      <!-- Dark mode and light mode switch -->
+      <div class="box-border">
+        <input
+          type="checkbox"
+          id="darkModeTogglerBig"
+          class="opacity-0 absolute"
+        />
+        <label
+          for="darkModeTogglerBig"
+          class="bg-gray-300 w-12 h-6 rounded-3xl relative p-1 cursor-pointer flex justify-between items-center"
+        >
+          <i class="fas fa-moon text-yellow-500"></i>
+          <i class="fas fa-sun text-orange-600"></i>
+          <i
+            id="modeToggleCircleBig"
+            class="fas fa-circle text-2xl absolute left-0 text-black dark:text-white dark:right-0 transition-all"
+          ></i>
+        </label>
+      </div>
       <div>
         <ul class="flex nav-links gap-8 list-none list-image-none text-2xl">
           <li>
             <a
-              class="transition-all text-black no-underline hover:text-gray-500 hover:underline hover:underline-offset-8 decoration-gray-400"
+              class="transition-all text-black dark:text-white no-underline hover:text-gray-500 hover:underline hover:underline-offset-8 decoration-gray-400"
               href="#about"
               >About</a
             >
           </li>
           <li>
             <a
-              class="transition-all text-black no-underline hover:text-gray-500 hover:underline hover:underline-offset-8 decoration-gray-400"
+              class="transition-all text-black dark:text-white no-underline hover:text-gray-500 hover:underline hover:underline-offset-8 decoration-gray-400"
               href="#skills"
               >Skills</a
             >
           </li>
           <li>
             <a
-              class="transition-all text-black no-underline hover:text-gray-500 hover:underline hover:underline-offset-8 decoration-gray-400"
+              class="transition-all text-black dark:text-white no-underline hover:text-gray-500 hover:underline hover:underline-offset-8 decoration-gray-400"
               href="#projects"
               >Projects</a
             >
           </li>
           <li>
             <a
-              class="transition-all text-black no-underline hover:text-gray-500 hover:underline hover:underline-offset-8 decoration-gray-400"
+              class="transition-all text-black dark:text-white no-underline hover:text-gray-500 hover:underline hover:underline-offset-8 decoration-gray-400"
               href="#contact"
               >Contact</a
             >
@@ -57,20 +80,41 @@
     </nav>
 
     <!-- Navbar for Small Screens -->
-    <nav class="hidden max-md:flex h-[20vh] justify-around items-center">
+    <nav
+      class="hidden max-md:flex h-[20vh] justify-around items-center w-full fixed bg-white z-50 dark:bg-black"
+    >
       <div class="text-2xl">Pranay</div>
+      <!-- Dark mode and light mode switch -->
+      <div class="box-border">
+        <input
+          type="checkbox"
+          id="darkModeToggler"
+          class="opacity-0 absolute"
+        />
+        <label
+          for="darkModeToggler"
+          class="bg-gray-300 w-12 h-6 rounded-3xl relative p-1 cursor-pointer flex justify-between items-center"
+        >
+          <i class="fas fa-moon text-yellow-500"></i>
+          <i class="fas fa-sun text-orange-600"></i>
+          <i
+            id="modeToggleCircle"
+            class="fas fa-circle text-2xl absolute left-0 text-black dark:text-white dark:right-0 transition-all"
+          ></i>
+        </label>
+      </div>
       <div class="relative inline-block">
         <div onclick="navDisplay()">
           <i
-            class="fas fa-ellipsis-v text-lg hover:text-gray-600 small-nav-icon cursor-pointer text-black"
+            class="fas fa-ellipsis-v text-lg hover:text-gray-600 small-nav-icon cursor-pointer text-black dark:text-white"
           ></i>
         </div>
         <div
-          class="smallNavMenuItems absolute top-full right-0 bg-white w-fit hidden"
+          class="smallNavMenuItems absolute top-full right-0 bg-white w-fit hidden dark:bg-black"
         >
           <li class="list-none">
             <a
-              class="transition-all text-black no-underline hover:text-gray-500 hover:underline hover:underline-offset-8 decoration-gray-400 block p-2.5 text-center text-2xl"
+              class="dark:text-white transition-all text-black no-underline hover:text-gray-500 hover:underline hover:underline-offset-8 decoration-gray-400 block p-2.5 text-center text-2xl"
               href="#about"
               onclick="navDisplay()"
               >About</a
@@ -78,7 +122,7 @@
           </li>
           <li class="list-none">
             <a
-              class="transition-all text-black no-underline hover:text-gray-500 hover:underline hover:underline-offset-8 decoration-gray-400 block p-2.5 text-center text-2xl"
+              class="dark:text-white transition-all text-black no-underline hover:text-gray-500 hover:underline hover:underline-offset-8 decoration-gray-400 block p-2.5 text-center text-2xl"
               href="#skills"
               onclick="navDisplay()"
               >Skills</a
@@ -86,7 +130,7 @@
           </li>
           <li class="list-none">
             <a
-              class="transition-all text-black no-underline hover:text-gray-500 hover:underline hover:underline-offset-8 decoration-gray-400 block p-2.5 text-center text-2xl"
+              class="dark:text-white transition-all text-black no-underline hover:text-gray-500 hover:underline hover:underline-offset-8 decoration-gray-400 block p-2.5 text-center text-2xl"
               href="#projects"
               onclick="navDisplay()"
               >Projects</a
@@ -94,7 +138,7 @@
           </li>
           <li class="list-none">
             <a
-              class="transition-all text-black no-underline hover:text-gray-500 hover:underline hover:underline-offset-8 decoration-gray-400 block p-2.5 text-center text-2xl"
+              class="dark:text-white transition-all text-black no-underline hover:text-gray-500 hover:underline hover:underline-offset-8 decoration-gray-400 block p-2.5 text-center text-2xl"
               href="#contact"
               onclick="navDisplay()"
               >Contact</a
@@ -105,583 +149,722 @@
     </nav>
 
     <!-- Profile Section -->
-    <div
-      id="profile"
-      class="flex justify-center gap-20 max-2xl:h-4/5 max-2xl:mb-24 max-xl:block max-sm:h-4/5 mb-0 pt-[5vh] h-[95vh] my-0 mx-40 box-border min-h-fit max-xl:h-fit max-xl:my-0 max-xl:mx-20"
-    >
+    <div class="w-full bg-white dark:bg-black">
       <div
-        class="flex h-96 w-96 my-auto mx-0 max-xl:w-72 max-xl:h-72 max-xl:mt-0 max-xl:mx-auto max-xl:mb-8 max-sm:w-auto max-sm:h-1/2 max-sm:justify-center"
+        id="profile"
+        class="flex justify-center gap-20 max-2xl:h-4/5 max-2xl:mb-24 max-xl:block max-sm:h-4/5 mb-0 pt-[5vh] h-[95vh] my-0 mx-40 box-border min-h-fit max-xl:h-fit max-xl:my-0 max-xl:mx-20"
       >
-        <img
-          src="./images/pranay.jpg"
-          alt="Pranay Kumar"
-          class="rounded-full"
-        />
-      </div>
-      <div class="self-center text-center">
-        <p class="text-center text-gray-600 font-semibold">Hello, I'm</p>
-        <h1 class="text-5xl text-center max-sm:text-3xl">Pranay Kumar</h1>
-        <p class="text-2xl mb-4 max-sm:text-xl text-gray-600 font-semibold">
-          Software Developer
-        </p>
-        <div class="flex justify-center gap-4 max-sm:flex-wrap">
-          <a
-            class="transition-all font-semibold p-4 w-32 rounded-3xl border-gray-800 bg-none hover:cursor-pointer hover:bg-gray-800 hover:text-white hover:border-white border border-solid"
-            onclick=""
-          >
-            Download CV
-          </a>
-          <a
-            class="transition-all font-semibold p-4 w-32 rounded-3xl border-gray-800 text-white bg-gray-900 hover:cursor-pointer hover:bg-black no-underline"
-            href="#contact"
-          >
-            Contact Info
-          </a>
-        </div>
-        <div id="socials" class="flex justify-center mt-4 gap-4">
-          <div class="rounded-full flex items-center py-2 px-2">
-            <a
-              href="https://www.linkedin.com/in/bommaraju-pranay-kumar/"
-              class="no-underline text-black font-bold"
-              target="_blank"
-            >
-              <i class="fa-brands fa-linkedin-in cursor-pointer text-3xl"></i>
-            </a>
-          </div>
-          <div class="rounded-full flex items-center py-2 px-2">
-            <a
-              href="https://www.github.com/pranay2244"
-              class="no-underline decoration-gray-400 font-bold text-black"
-              target="_blank"
-            >
-              <i class="fa-brands fa-github cursor-pointer text-3xl"></i>
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- About Section -->
-    <div
-      id="about"
-      class="pt-[5vh] h-[95vh] my-0 mx-40 box-border min-h-fit max-xl:h-fit max-xl:my-0 max-xl:mx-20 relative"
-    >
-      <p class="text-center text-gray-600">Get To Know More</p>
-      <h1 class="text-5xl text-center max-sm:text-3xl m-0">About Me</h1>
-      <div class="flex gap-16 h-4/5 max-xl:block max-xl:h-fit">
         <div
           class="flex h-96 w-96 my-auto mx-0 max-xl:w-72 max-xl:h-72 max-xl:mt-0 max-xl:mx-auto max-xl:mb-8 max-sm:w-auto max-sm:h-1/2 max-sm:justify-center"
         >
           <img
             src="./images/pranay.jpg"
-            alt="Profile picture"
-            class="rounded-3xl"
+            alt="Pranay Kumar"
+            class="rounded-full"
           />
         </div>
-        <div class="flex flex-col justify-center">
+        <div class="self-center text-center">
+          <p class="text-center text-gray-600 font-semibold dark:text-gray-400">
+            Hello, I'm
+          </p>
+          <h1
+            class="text-5xl text-center max-sm:text-3xl text-black dark:text-white"
+          >
+            Pranay Kumar
+          </h1>
+          <p
+            class="text-2xl mb-4 max-sm:text-xl text-gray-600 font-semibold dark:text-gray-400"
+          >
+            Software Developer
+          </p>
+          <div class="flex justify-center gap-4 max-sm:flex-wrap">
+            <a
+              class="text-black hover:text-white hover:bg-gray-800 dark:text-white dark:bg-gray-900 dark:hover:bg-white dark:hover:text-black dark:border-gray-500 transition-all font-semibold p-4 w-32 rounded-3xl border-gray-800 bg-none hover:cursor-pointer hover:border-white border border-solid"
+              onclick=""
+            >
+              Download CV
+            </a>
+            <a
+              class="transition-all font-semibold p-4 w-32 rounded-3xl border-gray-800 text-white bg-gray-900 hover:cursor-pointer hover:bg-black no-underline dark:bg-white dark:text-black dark:hover:bg-black dark:hover:text-white dark:hover:border-gray-400 border-solid border"
+              href="#contact"
+            >
+              Contact Info
+            </a>
+          </div>
+          <div id="socials" class="flex justify-center mt-4 gap-4">
+            <div class="rounded-full flex items-center py-2 px-2">
+              <a
+                href="https://www.linkedin.com/in/bommaraju-pranay-kumar/"
+                class="no-underline text-black font-bold"
+                target="_blank"
+              >
+                <i class="fa-brands fa-linkedin-in cursor-pointer text-3xl"></i>
+              </a>
+            </div>
+            <div class="rounded-full flex items-center py-2 px-2">
+              <a
+                href="https://www.github.com/pranay2244"
+                class="no-underline decoration-gray-400 font-bold text-black"
+                target="_blank"
+              >
+                <i class="fa-brands fa-github cursor-pointer text-3xl"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- About Section -->
+    <div class="bg-white dark:bg-black">
+      <div
+        id="about"
+        class="pt-[5vh] h-[95vh] my-0 mx-40 box-border min-h-fit max-xl:h-fit max-xl:my-0 max-xl:mx-20 relative"
+      >
+        <p class="text-center text-gray-600 dark:text-gray-300">
+          Get To Know More
+        </p>
+        <h1
+          class="text-5xl text-center max-sm:text-3xl m-0 text-black dark:text-white"
+        >
+          About Me
+        </h1>
+        <div class="flex gap-16 h-4/5 max-xl:block max-xl:h-fit">
+          <div
+            class="flex h-96 w-96 my-auto mx-0 max-xl:w-72 max-xl:h-72 max-xl:mt-0 max-xl:mx-auto max-xl:mb-8 max-sm:w-auto max-sm:h-1/2 max-sm:justify-center"
+          >
+            <img
+              src="./images/pranay.jpg"
+              alt="Profile picture"
+              class="rounded-3xl"
+            />
+          </div>
+          <div class="flex flex-col justify-center">
+            <div
+              class="gap-8 my-8 flex max-2xl:flex-wrap max-xl:mt-0 max-sm:flex-wrap"
+            >
+              <div
+                class="p-6 flex-1 bg-white rounded-3xl border border-solid border-gray-400 text-center dark:bg-black"
+              >
+                <i
+                  class="fa-solid fa-briefcase text-2xl text-black dark:text-white"
+                ></i>
+
+                <h3 class="m-1 text-black dark:text-white">Experience</h3>
+                <p class="text-gray-600 dark:text-gray-300">
+                  2+ years <br />Software Development
+                </p>
+              </div>
+              <div
+                class="p-6 flex-1 bg-white rounded-3xl border border-gray-400 text-center border-solid dark:bg-black"
+              >
+                <i
+                  class="fa-solid fa-book text-2xl text-black dark:text-white"
+                ></i>
+                <h3 class="m-1 text-black dark:text-white">Education</h3>
+                <p class="text-gray-600 dark:text-gray-300">
+                  Bachelor of Technology<br />Computer Science and Engineering
+                </p>
+              </div>
+            </div>
+            <div class="max-sm:text-justify">
+              <p class="text-gray-600 dark:text-gray-300">
+                I'm a software developer from Hyderabad who finds joy in coding
+                and turning ideas into functional solutions. Outside of work, I
+                enjoy playing badminton, balancing mental stimulation with
+                physical activity. During my free time, I immerse myself in the
+                enchanting world of music, finding solace and inspiration in its
+                diverse melodies.
+              </p>
+            </div>
+          </div>
+        </div>
+        <a href="#skills" class="text-black no-underline dark:text-white"
+          ><i
+            class="fa-solid fa-angles-down text-2xl absolute -right-20 bottom-10 max-xl:hidden"
+          ></i>
+        </a>
+      </div>
+    </div>
+
+    <!-- Skills Section -->
+    <div class="bg-white dark:bg-black">
+      <div
+        id="skills"
+        class="pt-[5vh] h-[95vh] my-0 mx-40 box-border min-h-fit max-xl:h-fit max-xl:my-0 max-xl:mx-20 relative max-xl:mt-8"
+      >
+        <p class="text-center text-gray-600 dark:text-gray-300">Explore My</p>
+        <h1
+          class="text-5xl text-center max-sm:text-3xl m-0 text-black dark:text-white"
+        >
+          Skills
+        </h1>
+        <div class="flex justify-center flex-col max-xl:mt-8">
           <div
             class="gap-8 my-8 flex max-2xl:flex-wrap max-xl:mt-0 max-sm:flex-wrap"
           >
             <div
-              class="p-6 flex-1 bg-white rounded-3xl border border-solid border-gray-400 text-center items-center"
+              class="p-6 flex-1 bg-white rounded-3xl border border-solid border-gray-400 text-center dark:bg-black"
             >
-              <i class="fa-solid fa-briefcase text-2xl"></i>
-
-              <h3 class="m-1">Experience</h3>
-              <p class="text-gray-600">2+ years <br />Software Development</p>
+              <h2
+                class="text-gray-600 font-semibold text-3xl mb-8 max-sm:text-xl dark:text-gray-300"
+              >
+                Frontend Development
+              </h2>
+              <div
+                class="flex text-left flex-wrap flex-row gap-10 justify-around"
+              >
+                <div
+                  class="flex w-40 justify-around gap-2 max-sm:text-base items-center"
+                >
+                  <i
+                    class="fa-solid fa-circle-check text-xl text-black dark:text-white"
+                  ></i>
+                  <div>
+                    <h3 class="m-0 text-black dark:text-white">HTML</h3>
+                    <p class="text-gray-600 m-0 mt-1 dark:text-gray-300">
+                      Experienced
+                    </p>
+                  </div>
+                </div>
+                <div
+                  class="flex w-40 justify-around gap-2 max-sm:text-base items-center"
+                >
+                  <i
+                    class="fa-solid fa-circle-check text-xl text-black dark:text-white"
+                  ></i>
+                  <div>
+                    <h3 class="m-0 text-black dark:text-white">CSS</h3>
+                    <p class="text-gray-600 m-0 mt-1 dark:text-gray-300">
+                      Experienced
+                    </p>
+                  </div>
+                </div>
+                <div
+                  class="flex w-40 justify-around gap-2 max-sm:text-base items-center"
+                >
+                  <i
+                    class="fa-solid fa-circle-check text-xl text-black dark:text-white"
+                  ></i>
+                  <div>
+                    <h3 class="m-0 text-black dark:text-white">Tailwind</h3>
+                    <p class="text-gray-600 m-0 mt-1 dark:text-gray-300">
+                      Intermediate
+                    </p>
+                  </div>
+                </div>
+                <div
+                  class="flex w-40 justify-around gap-2 max-sm:text-base items-center"
+                >
+                  <i
+                    class="fa-solid fa-circle-check text-xl text-black dark:text-white"
+                  ></i>
+                  <div>
+                    <h3 class="m-0 text-black dark:text-white">JavaScript</h3>
+                    <p class="text-gray-600 m-0 mt-1 dark:text-gray-300">
+                      Experienced
+                    </p>
+                  </div>
+                </div>
+                <div
+                  class="flex w-40 justify-around gap-2 max-sm:text-base items-center"
+                >
+                  <i
+                    class="fa-solid fa-circle-check text-xl text-black dark:text-white"
+                  ></i>
+                  <div>
+                    <h3 class="m-0 text-black dark:text-white">TypeScript</h3>
+                    <p class="text-gray-600 m-0 mt-1 dark:text-gray-300">
+                      Experienced
+                    </p>
+                  </div>
+                </div>
+                <div
+                  class="flex w-40 justify-around gap-2 max-sm:text-base items-center"
+                >
+                  <i
+                    class="fa-solid fa-circle-check text-xl text-black dark:text-white"
+                  ></i>
+                  <div>
+                    <h3 class="m-0 text-black dark:text-white">Angular</h3>
+                    <p class="text-gray-600 m-0 mt-1 dark:text-gray-300">
+                      Intermediate
+                    </p>
+                  </div>
+                </div>
+              </div>
             </div>
             <div
-              class="p-6 flex-1 bg-white rounded-3xl border border-gray-400 text-center border-solid"
+              class="p-6 flex-1 bg-white rounded-3xl border border-solid border-gray-400 text-center dark:bg-black"
             >
-              <i class="fa-solid fa-book text-2xl"></i>
-              <h3 class="m-1">Education</h3>
-              <p class="text-gray-600">
-                Bachelor of Technology<br />Computer Science and Engineering
-              </p>
+              <h2
+                class="text-gray-600 font-semibold text-3xl mb-8 max-sm:text-xl dark:text-gray-300"
+              >
+                Backend Development
+              </h2>
+              <div
+                class="flex text-left flex-wrap flex-row gap-10 justify-around"
+              >
+                <div
+                  class="flex w-40 justify-around gap-2 max-sm:text-base items-center"
+                >
+                  <i
+                    class="fa-solid fa-circle-check text-xl text-black dark:text-white"
+                  ></i>
+                  <div>
+                    <h3 class="m-0 text-black dark:text-white">Spring</h3>
+                    <p class="text-gray-600 m-0 mt-1 dark:text-gray-300">
+                      Experienced
+                    </p>
+                  </div>
+                </div>
+                <div
+                  class="flex w-40 justify-around gap-2 max-sm:text-base items-center"
+                >
+                  <i
+                    class="fa-solid fa-circle-check text-xl text-black dark:text-white"
+                  ></i>
+                  <div>
+                    <h3 class="m-0 text-black dark:text-white">Node JS</h3>
+                    <p class="text-gray-600 m-0 mt-1 dark:text-gray-300">
+                      Intermediate
+                    </p>
+                  </div>
+                </div>
+                <div
+                  class="flex w-40 justify-around gap-2 max-sm:text-base items-center"
+                >
+                  <i
+                    class="fa-solid fa-circle-check text-xl text-black dark:text-white"
+                  ></i>
+                  <div>
+                    <h3 class="m-0 text-black dark:text-white">Go (Echo)</h3>
+                    <p class="text-gray-600 m-0 mt-1 dark:text-gray-300">
+                      Basic
+                    </p>
+                  </div>
+                </div>
+                <div
+                  class="flex w-40 justify-around gap-2 max-sm:text-base items-center"
+                >
+                  <i
+                    class="fa-solid fa-circle-check text-xl text-black dark:text-white"
+                  ></i>
+                  <div>
+                    <h3 class="m-0 text-black dark:text-white">ExpressJS</h3>
+                    <p class="text-gray-600 m-0 mt-1 dark:text-gray-300">
+                      Intermediate
+                    </p>
+                  </div>
+                </div>
+                <div
+                  class="flex w-40 justify-around gap-2 max-sm:text-base items-center"
+                >
+                  <i
+                    class="fa-solid fa-circle-check text-xl text-black dark:text-white"
+                  ></i>
+                  <div>
+                    <h3 class="m-0 text-black dark:text-white">
+                      MicroServices
+                    </h3>
+                    <p class="text-gray-600 dark:text-gray-300 m-0 mt-1">
+                      Intermediate
+                    </p>
+                  </div>
+                </div>
+                <div
+                  class="flex w-40 justify-around gap-2 max-sm:text-base items-center"
+                >
+                  <i
+                    class="fa-solid fa-circle-check text-xl text-black dark:text-white"
+                  ></i>
+                  <div>
+                    <h3 class="m-0 text-black dark:text-white">Docker</h3>
+                    <p class="text-gray-600 m-0 mt-1 dark:text-gray-300">
+                      Basic
+                    </p>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
-          <div class="max-sm:text-justify">
-            <p class="text-gray-600">
-              I'm a software developer from Hyderabad who finds joy in coding
-              and turning ideas into functional solutions. Outside of work, I
-              enjoy playing badminton, balancing mental stimulation with
-              physical activity. During my free time, I immerse myself in the
-              enchanting world of music, finding solace and inspiration in its
-              diverse melodies.
-            </p>
+          <div
+            class="gap-8 my-8 flex max-2xl:flex-wrap max-xl:mt-0 max-sm:flex-wrap"
+          >
+            <div
+              class="p-6 flex-1 bg-white rounded-3xl border border-solid border-gray-400 text-center dark:bg-black"
+            >
+              <h2
+                class="text-gray-600 font-semibold text-3xl mb-8 max-sm:text-xl dark:text-gray-300"
+              >
+                Databases
+              </h2>
+              <div
+                class="flex text-left flex-wrap flex-row gap-10 justify-around"
+              >
+                <div
+                  class="flex w-40 justify-around gap-2 max-sm:text-base items-center"
+                >
+                  <i
+                    class="fa-solid fa-circle-check text-xl text-black dark:text-white"
+                  ></i>
+                  <div>
+                    <h3 class="m-0 text-black dark:text-white">Oracle</h3>
+                    <p class="text-gray-600 m-0 mt-1 dark:text-gray-300">
+                      Experienced
+                    </p>
+                  </div>
+                </div>
+                <div
+                  class="flex w-40 justify-around gap-2 max-sm:text-base items-center"
+                >
+                  <i
+                    class="fa-solid fa-circle-check text-xl text-black dark:text-white"
+                  ></i>
+                  <div>
+                    <h3 class="m-0 text-black dark:text-white">MySQL</h3>
+                    <p class="text-gray-600 m-0 mt-1 dark:text-gray-300">
+                      Experienced
+                    </p>
+                  </div>
+                </div>
+                <div
+                  class="flex w-40 justify-around gap-2 max-sm:text-base items-center"
+                >
+                  <i
+                    class="fa-solid fa-circle-check text-xl text-black dark:text-white"
+                  ></i>
+                  <div>
+                    <h3 class="m-0 text-black dark:text-white">MongoDB</h3>
+                    <p class="text-gray-600 m-0 mt-1 dark:text-gray-300">
+                      Intermediate
+                    </p>
+                  </div>
+                </div>
+                <div
+                  class="flex w-40 justify-around gap-2 max-sm:text-base items-center"
+                >
+                  <i
+                    class="fa-solid fa-circle-check text-xl text-black dark:text-white"
+                  ></i>
+                  <div>
+                    <h3 class="m-0 text-black dark:text-white">Firebase RT</h3>
+                    <p class="text-gray-600 m-0 mt-1 dark:text-gray-300">
+                      Intermediate
+                    </p>
+                  </div>
+                </div>
+                <div
+                  class="flex w-40 justify-around gap-2 max-sm:text-base items-center"
+                >
+                  <i
+                    class="fa-solid fa-circle-check text-xl text-black dark:text-white"
+                  ></i>
+                  <div>
+                    <h3 class="m-0 text-black dark:text-white">Firestore</h3>
+                    <p class="text-gray-600 m-0 mt-1 dark:text-gray-300">
+                      Basic
+                    </p>
+                  </div>
+                </div>
+                <div
+                  class="flex w-40 justify-around gap-2 max-sm:text-base items-center"
+                >
+                  <i
+                    class="fa-solid fa-circle-check text-xl text-black dark:text-white"
+                  ></i>
+                  <div>
+                    <h3 class="m-0 text-black dark:text-white">Influx DB</h3>
+                    <p class="text-gray-600 m-0 mt-1 dark:text-gray-300">
+                      Basic
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="p-6 flex-1 bg-white rounded-3xl border border-solid border-gray-400 text-center dark:bg-black"
+            >
+              <h2
+                class="text-gray-600 font-semibold text-3xl mb-8 max-sm:text-xl dark:text-gray-300"
+              >
+                Other
+              </h2>
+              <div
+                class="flex text-left flex-wrap flex-row gap-10 justify-around"
+              >
+                <div
+                  class="flex w-40 justify-around gap-2 max-sm:text-base items-center"
+                >
+                  <i
+                    class="fa-solid fa-circle-check text-xl text-black dark:text-white"
+                  ></i>
+                  <div>
+                    <h3 class="m-0 text-black dark:text-white">Git</h3>
+                    <p class="text-gray-600 m-0 mt-1 dark:text-gray-300">
+                      Experienced
+                    </p>
+                  </div>
+                </div>
+                <div
+                  class="flex w-40 justify-around gap-2 max-sm:text-base items-center"
+                >
+                  <i
+                    class="fa-solid fa-circle-check text-xl text-black dark:text-white"
+                  ></i>
+                  <div>
+                    <h3 class="m-0 text-black dark:text-white">OCI</h3>
+                    <p class="text-gray-600 m-0 mt-1 dark:text-gray-300">
+                      Intermediate
+                    </p>
+                  </div>
+                </div>
+                <div
+                  class="flex w-40 justify-around gap-2 max-sm:text-base items-center"
+                >
+                  <i
+                    class="fa-solid fa-circle-check text-xl text-black dark:text-white"
+                  ></i>
+                  <div>
+                    <h3 class="m-0 text-black dark:text-white">Jira</h3>
+                    <p class="text-gray-600 m-0 mt-1 dark:text-gray-300">
+                      Intermediate
+                    </p>
+                  </div>
+                </div>
+                <div
+                  class="flex w-40 justify-around gap-2 max-sm:text-base items-center"
+                >
+                  <i
+                    class="fa-solid fa-circle-check text-xl text-black dark:text-white"
+                  ></i>
+                  <div>
+                    <h3 class="m-0 text-black dark:text-white">DSA</h3>
+                    <p class="text-gray-600 m-0 mt-1 dark:text-gray-300">
+                      Intermediate
+                    </p>
+                  </div>
+                </div>
+                <div
+                  class="flex w-40 justify-around gap-2 max-sm:text-base items-center"
+                >
+                  <i
+                    class="fa-solid fa-circle-check text-xl text-black dark:text-white"
+                  ></i>
+                  <div>
+                    <h3 class="m-0 text-black dark:text-white">Android</h3>
+                    <p class="text-gray-600 m-0 mt-1 dark:text-gray-300">
+                      Intermediate
+                    </p>
+                  </div>
+                </div>
+                <div
+                  class="flex w-40 justify-around gap-2 max-sm:text-base items-center"
+                >
+                  <i
+                    class="fa-solid fa-circle-check text-xl text-black dark:text-white"
+                  ></i>
+                  <div>
+                    <h3 class="m-0 text-black dark:text-white">AWS Cloud</h3>
+                    <p class="text-gray-600 m-0 mt-1 dark:text-gray-300">
+                      Basic
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
+        <a href="#projects" class="text-black no-underline dark:text-white"
+          ><i
+            class="fa-solid fa-angles-down text-2xl absolute -right-20 bottom-10 max-xl:hidden"
+          ></i>
+        </a>
       </div>
-      <a href="#skills" class="text-black no-underline"
-        ><i
-          class="fa-solid fa-angles-down text-2xl absolute -right-20 bottom-10 max-xl:hidden"
-        ></i>
-      </a>
-    </div>
-
-    <!-- Skills Section -->
-    <div
-      id="skills"
-      class="pt-[5vh] h-[95vh] my-0 mx-40 box-border min-h-fit max-xl:h-fit max-xl:my-0 max-xl:mx-20 relative max-xl:mt-8"
-    >
-      <p class="text-center text-gray-600">Explore My</p>
-      <h1 class="text-5xl text-center max-sm:text-3xl m-0">Skills</h1>
-      <div class="flex justify-center flex-col max-xl:mt-8">
-        <div
-          class="gap-8 my-8 flex max-2xl:flex-wrap max-xl:mt-0 max-sm:flex-wrap"
-        >
-          <div
-            class="p-6 flex-1 bg-white rounded-3xl border border-solid border-gray-400 text-center"
-          >
-            <h2
-              class="text-gray-600 font-semibold text-3xl mb-8 max-sm:text-xl"
-            >
-              Frontend Development
-            </h2>
-            <div
-              class="flex text-left flex-wrap flex-row gap-10 justify-around"
-            >
-              <div
-                class="flex w-40 justify-around gap-2 max-sm:text-base items-center"
-              >
-                <i class="fa-solid fa-circle-check text-xl"></i>
-                <div>
-                  <h3 class="m-0">HTML</h3>
-                  <p class="text-gray-600 m-0 mt-1">Experienced</p>
-                </div>
-              </div>
-              <div
-                class="flex w-40 justify-around gap-2 max-sm:text-base items-center"
-              >
-                <i class="fa-solid fa-circle-check text-xl"></i>
-                <div>
-                  <h3 class="m-0">CSS</h3>
-                  <p class="text-gray-600 m-0 mt-1">Experienced</p>
-                </div>
-              </div>
-              <div
-                class="flex w-40 justify-around gap-2 max-sm:text-base items-center"
-              >
-                <i class="fa-solid fa-circle-check text-xl"></i>
-                <div>
-                  <h3 class="m-0">Tailwind</h3>
-                  <p class="text-gray-600 m-0 mt-1">Intermediate</p>
-                </div>
-              </div>
-              <div
-                class="flex w-40 justify-around gap-2 max-sm:text-base items-center"
-              >
-                <i class="fa-solid fa-circle-check text-xl"></i>
-                <div>
-                  <h3 class="m-0">JavaScript</h3>
-                  <p class="text-gray-600 m-0 mt-1">Experienced</p>
-                </div>
-              </div>
-              <div
-                class="flex w-40 justify-around gap-2 max-sm:text-base items-center"
-              >
-                <i class="fa-solid fa-circle-check text-xl"></i>
-                <div>
-                  <h3 class="m-0">TypeScript</h3>
-                  <p class="text-gray-600 m-0 mt-1">Experienced</p>
-                </div>
-              </div>
-              <div
-                class="flex w-40 justify-around gap-2 max-sm:text-base items-center"
-              >
-                <i class="fa-solid fa-circle-check text-xl"></i>
-                <div>
-                  <h3 class="m-0">Angular</h3>
-                  <p class="text-gray-600 m-0 mt-1">Intermediate</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div
-            class="p-6 flex-1 bg-white rounded-3xl border border-solid border-gray-400 text-center"
-          >
-            <h2
-              class="text-gray-600 font-semibold text-3xl mb-8 max-sm:text-xl"
-            >
-              Backend Development
-            </h2>
-            <div
-              class="flex text-left flex-wrap flex-row gap-10 justify-around"
-            >
-              <div
-                class="flex w-40 justify-around gap-2 max-sm:text-base items-center"
-              >
-                <i class="fa-solid fa-circle-check text-xl"></i>
-                <div>
-                  <h3 class="m-0">Spring</h3>
-                  <p class="text-gray-600 m-0 mt-1">Experienced</p>
-                </div>
-              </div>
-              <div
-                class="flex w-40 justify-around gap-2 max-sm:text-base items-center"
-              >
-                <i class="fa-solid fa-circle-check text-xl"></i>
-                <div>
-                  <h3 class="m-0">Node JS</h3>
-                  <p class="text-gray-600 m-0 mt-1">Intermediate</p>
-                </div>
-              </div>
-              <div
-                class="flex w-40 justify-around gap-2 max-sm:text-base items-center"
-              >
-                <i class="fa-solid fa-circle-check text-xl"></i>
-                <div>
-                  <h3 class="m-0">Go (Echo)</h3>
-                  <p class="text-gray-600 m-0 mt-1">Basic</p>
-                </div>
-              </div>
-              <div
-                class="flex w-40 justify-around gap-2 max-sm:text-base items-center"
-              >
-                <i class="fa-solid fa-circle-check text-xl"></i>
-                <div>
-                  <h3 class="m-0">ExpressJS</h3>
-                  <p class="text-gray-600 m-0 mt-1">Intermediate</p>
-                </div>
-              </div>
-              <div
-                class="flex w-40 justify-around gap-2 max-sm:text-base items-center"
-              >
-                <i class="fa-solid fa-circle-check text-xl"></i>
-                <div>
-                  <h3 class="m-0">Micro-Services</h3>
-                  <p class="text-gray-600 m-0 mt-1">Intermediate</p>
-                </div>
-              </div>
-              <div
-                class="flex w-40 justify-around gap-2 max-sm:text-base items-center"
-              >
-                <i class="fa-solid fa-circle-check text-xl"></i>
-                <div>
-                  <h3 class="m-0">Docker</h3>
-                  <p class="text-gray-600 m-0 mt-1">Basic</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div
-          class="gap-8 my-8 flex max-2xl:flex-wrap max-xl:mt-0 max-sm:flex-wrap"
-        >
-          <div
-            class="p-6 flex-1 bg-white rounded-3xl border border-solid border-gray-400 text-center"
-          >
-            <h2
-              class="text-gray-600 font-semibold text-3xl mb-8 max-sm:text-xl"
-            >
-              Databases
-            </h2>
-            <div
-              class="flex text-left flex-wrap flex-row gap-10 justify-around"
-            >
-              <div
-                class="flex w-40 justify-around gap-2 max-sm:text-base items-center"
-              >
-                <i class="fa-solid fa-circle-check text-xl"></i>
-                <div>
-                  <h3 class="m-0">Oracle</h3>
-                  <p class="text-gray-600 m-0 mt-1">Experienced</p>
-                </div>
-              </div>
-              <div
-                class="flex w-40 justify-around gap-2 max-sm:text-base items-center"
-              >
-                <i class="fa-solid fa-circle-check text-xl"></i>
-                <div>
-                  <h3 class="m-0">MySQL</h3>
-                  <p class="text-gray-600 m-0 mt-1">Experienced</p>
-                </div>
-              </div>
-              <div
-                class="flex w-40 justify-around gap-2 max-sm:text-base items-center"
-              >
-                <i class="fa-solid fa-circle-check text-xl"></i>
-                <div>
-                  <h3 class="m-0">MongoDB</h3>
-                  <p class="text-gray-600 m-0 mt-1">Intermediate</p>
-                </div>
-              </div>
-              <div
-                class="flex w-40 justify-around gap-2 max-sm:text-base items-center"
-              >
-                <i class="fa-solid fa-circle-check text-xl"></i>
-                <div>
-                  <h3 class="m-0">Firebase RT</h3>
-                  <p class="text-gray-600 m-0 mt-1">Intermediate</p>
-                </div>
-              </div>
-              <div
-                class="flex w-40 justify-around gap-2 max-sm:text-base items-center"
-              >
-                <i class="fa-solid fa-circle-check text-xl"></i>
-                <div>
-                  <h3 class="m-0">Firestore</h3>
-                  <p class="text-gray-600 m-0 mt-1">Basic</p>
-                </div>
-              </div>
-              <div
-                class="flex w-40 justify-around gap-2 max-sm:text-base items-center"
-              >
-                <i class="fa-solid fa-circle-check text-xl"></i>
-                <div>
-                  <h3 class="m-0">Influx DB</h3>
-                  <p class="text-gray-600 m-0 mt-1">Basic</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div
-            class="p-6 flex-1 bg-white rounded-3xl border border-solid border-gray-400 text-center"
-          >
-            <h2
-              class="text-gray-600 font-semibold text-3xl mb-8 max-sm:text-xl"
-            >
-              Other
-            </h2>
-            <div
-              class="flex text-left flex-wrap flex-row gap-10 justify-around"
-            >
-              <div
-                class="flex w-40 justify-around gap-2 max-sm:text-base items-center"
-              >
-                <i class="fa-solid fa-circle-check text-xl"></i>
-                <div>
-                  <h3 class="m-0">Git</h3>
-                  <p class="text-gray-600 m-0 mt-1">Experienced</p>
-                </div>
-              </div>
-              <div
-                class="flex w-40 justify-around gap-2 max-sm:text-base items-center"
-              >
-                <i class="fa-solid fa-circle-check text-xl"></i>
-                <div>
-                  <h3 class="m-0">OCI</h3>
-                  <p class="text-gray-600 m-0 mt-1">Intermediate</p>
-                </div>
-              </div>
-              <div
-                class="flex w-40 justify-around gap-2 max-sm:text-base items-center"
-              >
-                <i class="fa-solid fa-circle-check text-xl"></i>
-                <div>
-                  <h3 class="m-0">Jira</h3>
-                  <p class="text-gray-600 m-0 mt-1">Intermediate</p>
-                </div>
-              </div>
-              <div
-                class="flex w-40 justify-around gap-2 max-sm:text-base items-center"
-              >
-                <i class="fa-solid fa-circle-check text-xl"></i>
-                <div>
-                  <h3 class="m-0">DSA</h3>
-                  <p class="text-gray-600 m-0 mt-1">Intermediate</p>
-                </div>
-              </div>
-              <div
-                class="flex w-40 justify-around gap-2 max-sm:text-base items-center"
-              >
-                <i class="fa-solid fa-circle-check text-xl"></i>
-                <div>
-                  <h3 class="m-0">Android</h3>
-                  <p class="text-gray-600 m-0 mt-1">Intermediate</p>
-                </div>
-              </div>
-              <div
-                class="flex w-40 justify-around gap-2 max-sm:text-base items-center"
-              >
-                <i class="fa-solid fa-circle-check text-xl"></i>
-                <div>
-                  <h3 class="m-0">AWS Cloud</h3>
-                  <p class="text-gray-600 m-0 mt-1">Basic</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <a href="#projects" class="text-black no-underline"
-        ><i
-          class="fa-solid fa-angles-down text-2xl absolute -right-20 bottom-10 max-xl:hidden"
-        ></i>
-      </a>
     </div>
 
     <!-- Projects Section -->
-    <div
-      id="projects"
-      class="relative pt-[5vh] h-[95vh] my-0 mx-40 box-border min-h-fit max-xl:h-fit max-xl:my-0 max-xl:mx-20 max-2xl:h-fit"
-    >
-      <p class="text-center text-gray-600">Browse My</p>
-      <h1 class="text-5xl text-center max-sm:text-3xl m-0">Projects</h1>
-      <div class="flex justify-center flex-col max-xl:mt-8">
-        <div
-          class="gap-8 my-8 flex max-2xl:flex-wrap max-xl:mt-0 max-sm:flex-wrap"
+    <div class="bg-white dark:bg-black">
+      <div
+        id="projects"
+        class="relative pt-[5vh] h-[95vh] my-0 mx-40 box-border min-h-fit max-xl:h-fit max-xl:my-0 max-xl:mx-20 max-2xl:h-fit"
+      >
+        <p class="text-center text-gray-600 dark:text-gray-300">Browse My</p>
+        <h1
+          class="text-5xl text-center max-sm:text-3xl m-0 text-black dark:text-white"
         >
+          Projects
+        </h1>
+        <div class="flex justify-center flex-col max-xl:mt-8">
           <div
-            class="p-6 flex-1 bg-white rounded-3xl border border-solid border-gray-400 text-center"
+            class="gap-8 my-8 flex max-2xl:flex-wrap max-xl:mt-0 max-sm:flex-wrap"
           >
             <div
-              class="flex text-left flex-wrap flex-row gap-10 justify-around"
+              class="p-6 flex-1 bg-white rounded-3xl border border-solid border-gray-400 text-center dark:bg-black"
             >
-              <img
-                src="https://images.pexels.com/photos/1275929/pexels-photo-1275929.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-                alt="Bike App"
-                class="rounded-3xl w-[90%] h-[90%]"
-              />
-            </div>
-            <h2
-              class="font-semibold text-3xl mb-8 max-sm:text-xl m-4 text-black"
-            >
-              Bike Booking Application
-            </h2>
-            <p>
-              This Application is made using Spring boot for Backend, Angular
-              for Frontend and MySQL for Database to enhance Bike Booking
-              Experience.
-            </p>
-            <div class="flex justify-center gap-4 max-sm:flex-wrap">
-              <a
-                class="transition-all font-semibold p-4 w-32 rounded-full bg-none no-underline hover:cursor-pointer hover:bg-gray-800 hover:text-white hover:border-white border text-black border-solid border-gray-400"
-                href="https://github.com/pranay2244/BikeBookingApplication"
-                target="_blank"
+              <div
+                class="flex text-left flex-wrap flex-row gap-10 justify-around"
               >
-                Github
-              </a>
+                <img
+                  src="https://images.pexels.com/photos/1275929/pexels-photo-1275929.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                  alt="Bike App"
+                  class="rounded-3xl w-[90%] h-[90%]"
+                />
+              </div>
+              <h2
+                class="font-semibold text-3xl mb-8 max-sm:text-xl m-4 text-black dark:text-white"
+              >
+                Bike Booking Application
+              </h2>
+              <p class="text-gray-800 dark:text-gray-300">
+                This Application is made using Spring boot for Backend, Angular
+                for Frontend and MySQL for Database to enhance Bike Booking
+                Experience.
+              </p>
+              <div class="flex justify-center gap-4 max-sm:flex-wrap">
+                <a
+                  class="transition-all font-semibold p-4 w-32 rounded-full bg-none no-underline hover:cursor-pointer hover:bg-gray-800 hover:text-white hover:border-white border text-black border-solid border-gray-400 dark:text-white dark:hover:bg-gray-300 dark:hover:text-black"
+                  href="https://github.com/pranay2244/BikeBookingApplication"
+                  target="_blank"
+                >
+                  Github
+                </a>
+              </div>
             </div>
-          </div>
-          <div
-            class="p-6 flex-1 bg-white rounded-3xl border border-solid border-gray-400 text-center"
-          >
             <div
-              class="flex text-left flex-wrap flex-row gap-10 justify-around"
+              class="p-6 flex-1 bg-white rounded-3xl border border-solid border-gray-400 text-center dark:bg-black"
             >
-              <img
-                src="https://images.pexels.com/photos/1275929/pexels-photo-1275929.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-                alt="AI Congress App"
-                class="rounded-3xl w-[90%] h-[90%]"
-              />
-            </div>
-            <h2
-              class="font-semibold text-3xl mb-8 max-sm:text-xl m-4 text-black"
-            >
-              AI Congress Application
-            </h2>
-            <p>
-              This Application is made using HTML, CSS, JS and JQuery and to for
-              Authentication, it uses Firebase Authentication and to store data,
-              it uses Firebase Database.
-            </p>
-            <div class="flex justify-center gap-4 max-sm:flex-wrap">
-              <a
-                class="transition-all font-semibold p-4 w-32 rounded-full bg-none no-underline border-solid hover:cursor-pointer hover:bg-gray-800 hover:text-white hover:border-white border text-black border-gray-400"
-                href="https://github.com/pranay2244/aicongress"
-                target="_blank"
+              <div
+                class="flex text-left flex-wrap flex-row gap-10 justify-around"
               >
-                Github
-              </a>
-              <a
-                class="transition-all font-semibold p-4 w-32 rounded-full bg-none no-underline border-solid hover:cursor-pointer hover:bg-gray-800 hover:text-white hover:border-white border text-black border-gray-400"
-                href="https://iaicaie.web.app/"
-                target="_blank"
+                <img
+                  src="https://images.pexels.com/photos/1275929/pexels-photo-1275929.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                  alt="AI Congress App"
+                  class="rounded-3xl w-[90%] h-[90%]"
+                />
+              </div>
+              <h2
+                class="font-semibold text-3xl mb-8 max-sm:text-xl m-4 text-black dark:text-white"
               >
-                Live Demo
-              </a>
+                AI Congress Application
+              </h2>
+              <p class="text-gray-800 dark:text-gray-300">
+                This Application is made using HTML, CSS, JS and JQuery and to
+                for Authentication, it uses Firebase Authentication and to store
+                data, it uses Firebase Database.
+              </p>
+              <div class="flex justify-center gap-4 max-sm:flex-wrap">
+                <a
+                  class="transition-all font-semibold p-4 w-32 rounded-full bg-none no-underline hover:cursor-pointer hover:bg-gray-800 hover:text-white hover:border-white border text-black border-solid border-gray-400 dark:text-white dark:hover:bg-gray-300 dark:hover:text-black"
+                  href="https://github.com/pranay2244/aicongress"
+                  target="_blank"
+                >
+                  Github
+                </a>
+                <a
+                  class="transition-all font-semibold p-4 w-32 rounded-full bg-none no-underline hover:cursor-pointer hover:bg-gray-800 hover:text-white hover:border-white border text-black border-solid border-gray-400 dark:text-white dark:hover:bg-gray-300 dark:hover:text-black"
+                  href="https://iaicaie.web.app/"
+                  target="_blank"
+                >
+                  Live Demo
+                </a>
+              </div>
             </div>
-          </div>
-          <div
-            class="p-6 flex-1 bg-white rounded-3xl border border-solid border-gray-400 text-center"
-          >
             <div
-              class="flex text-left flex-wrap flex-row gap-10 justify-around"
+              class="p-6 flex-1 bg-white rounded-3xl border border-solid border-gray-400 text-center dark:bg-black"
             >
-              <img
-                src="https://images.pexels.com/photos/1275929/pexels-photo-1275929.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-                alt="Train QR"
-                class="rounded-3xl w-[90%] h-[90%]"
-              />
-            </div>
-            <h2
-              class="font-semibold text-3xl mb-8 max-sm:text-xl m-4 text-black"
-            >
-              Railway Ticket Booking
-            </h2>
-            <p>
-              This is an android app which is developed using Java and XML for
-              frontend and Firebase Authentication and Firebase Realtime
-              Database for Backend.
-            </p>
-            <div class="flex justify-center gap-4 max-sm:flex-wrap">
-              <a
-                class="transition-all font-semibold p-4 w-32 rounded-full bg-none hover:cursor-pointer border-solid no-underline hover:bg-gray-800 hover:text-white hover:border-white border text-black border-gray-400"
-                href="https://github.com/pranay2244/train-qr"
-                target="_blank"
+              <div
+                class="flex text-left flex-wrap flex-row gap-10 justify-around"
               >
-                Github
-              </a>
+                <img
+                  src="https://images.pexels.com/photos/1275929/pexels-photo-1275929.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                  alt="Train QR"
+                  class="rounded-3xl w-[90%] h-[90%]"
+                />
+              </div>
+              <h2
+                class="font-semibold text-3xl mb-8 max-sm:text-xl m-4 text-black dark:text-white"
+              >
+                Railway Ticket Booking
+              </h2>
+              <p class="text-gray-800 dark:text-gray-300">
+                This is an android app which is developed using Java and XML for
+                frontend and Firebase Authentication and Firebase Realtime
+                Database for Backend.
+              </p>
+              <div class="flex justify-center gap-4 max-sm:flex-wrap">
+                <a
+                  class="transition-all font-semibold p-4 w-32 rounded-full bg-none no-underline hover:cursor-pointer hover:bg-gray-800 hover:text-white hover:border-white border text-black border-solid border-gray-400 dark:text-white dark:hover:bg-gray-300 dark:hover:text-black"
+                  href="https://github.com/pranay2244/train-qr"
+                  target="_blank"
+                >
+                  Github
+                </a>
+              </div>
             </div>
           </div>
         </div>
+        <a href="#contact" class="text-black no-underline dark:text-white"
+          ><i
+            class="fa-solid fa-angles-down text-2xl absolute -right-20 bottom-10 max-xl:hidden"
+          ></i>
+        </a>
       </div>
-      <a href="#contact" class="text-black no-underline"
-        ><i
-          class="fa-solid fa-angles-down text-2xl absolute -right-20 bottom-10 max-xl:hidden"
-        ></i>
-      </a>
     </div>
 
     <!-- Contact Section -->
-    <section
-      id="contact"
-      class="pt-[5vh] my-0 mx-40 box-border min-h-fit max-xl:h-fit max-xl:my-0 max-xl:mx-20 flex justify-center flex-col h-[70vh] max-2xl:h-fit max-sm:text-base"
-    >
-      <p class="text-center text-gray-600">Get in Touch</p>
-      <h1 class="text-5xl text-center max-sm:text-3xl m-0">Contact Me</h1>
+    <div class="bg-white dark:bg-black">
       <div
-        class="flex justify-center rounded-3xl border-gray-400 border my-8 mx-auto p-2 max-sm:flex-wrap border-solid"
+        id="contact"
+        class="pt-[5vh] my-0 mx-40 box-border min-h-fit max-xl:h-fit max-xl:my-0 max-xl:mx-20 flex justify-center flex-col h-[70vh] max-2xl:h-fit max-sm:text-base"
       >
-        <div
-          class="flex items-center justify-center gap-2 m-4 text-xl max-sm:m-0"
+        <p class="text-center text-gray-600 dark:text-gray-300">Get in Touch</p>
+        <h1
+          class="text-5xl text-center max-sm:text-3xl m-0 text-black dark:text-white"
         >
-          <i class="fa-regular fa-envelope"></i>
-          <p class="max-sm:text-base text-gray-600">
-            <a
-              class="transition-all text-black no-underline hover:text-gray-500 hover:underline hover:underline-offset-8 decoration-gray-400"
-              href="mailto:pranaybommaraju@gmail.com"
-              >pranaybommaraju@gmail.com</a
-            >
-          </p>
-        </div>
+          Contact Me
+        </h1>
         <div
-          class="flex items-center justify-center gap-2 m-4 text-xl max-sm:m-0"
+          class="flex justify-center rounded-3xl border-gray-400 border my-8 mx-auto p-2 max-sm:flex-wrap border-solid"
         >
-          <i class="fa-brands fa-linkedin-in"></i>
-          <p class="max-sm:text-base text-gray-600">
-            <a
-              class="transition-all text-black no-underline hover:text-gray-500 hover:underline hover:underline-offset-8 decoration-gray-400"
-              href="https://www.linkedin.com"
-              >LinkedIn</a
-            >
-          </p>
-        </div>
-        <div
-          class="flex items-center justify-center gap-2 m-4 text-xl max-sm:m-0"
-        >
-          <i class="fa-brands fa-linkedin-in"></i>
-          <p class="max-sm:text-base text-gray-600">
-            <a
-              class="transition-all text-black no-underline hover:text-gray-500 hover:underline hover:underline-offset-8 decoration-gray-400"
-              href="tel:+919381244438"
-              >+91 9381244438</a
-            >
-          </p>
+          <div
+            class="flex items-center justify-center gap-2 m-4 text-xl max-sm:m-0"
+          >
+            <i class="fa-regular fa-envelope text-black dark:text-white"></i>
+            <p class="max-sm:text-base text-gray-600">
+              <a
+                class="transition-all text-black dark:text-white no-underline hover:text-gray-500 hover:underline hover:underline-offset-8 decoration-gray-400"
+                href="mailto:pranaybommaraju@gmail.com"
+                >pranaybommaraju@gmail.com</a
+              >
+            </p>
+          </div>
+          <div
+            class="flex items-center justify-center gap-2 m-4 text-xl max-sm:m-0"
+          >
+            <i class="fa-brands fa-linkedin-in text-black dark:text-white"></i>
+            <p class="max-sm:text-base text-gray-600">
+              <a
+                class="transition-all text-black dark:text-white no-underline hover:text-gray-500 hover:underline hover:underline-offset-8 decoration-gray-400"
+                href="https://www.linkedin.com"
+                >LinkedIn</a
+              >
+            </p>
+          </div>
+          <div
+            class="flex items-center justify-center gap-2 m-4 text-xl max-sm:m-0"
+          >
+            <i class="fa-brands fa-linkedin-in text-black dark:text-white"></i>
+            <p class="max-sm:text-base text-gray-600">
+              <a
+                class="transition-all text-black dark:text-white no-underline hover:text-gray-500 hover:underline hover:underline-offset-8 decoration-gray-400"
+                href="tel:+919381244438"
+                >+91 9381244438</a
+              >
+            </p>
+          </div>
         </div>
       </div>
-    </section>
+    </div>
   </body>
   <script src="script.js"></script>
 </html>
